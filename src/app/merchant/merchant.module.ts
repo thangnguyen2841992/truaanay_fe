@@ -10,10 +10,16 @@ import { MyMerchantBannerComponent } from './my-merchant-banner/my-merchant-bann
 import { FooterComponent } from './footer/footer.component';
 import { MerchantSecondNavbarComponent } from './merchant-second-navbar/merchant-second-navbar.component';
 import { MerchantRegisterComponent } from './merchant-register/merchant-register.component';
+import { MerchantInfoComponent } from './merchant-info/merchant-info.component';
+import { DishEditComponent } from './dish-edit/dish-edit.component';
+import { DishDeleteComponent } from './dish-delete/dish-delete.component';
+import {ModalModule} from 'ngx-bootstrap/modal';
+import { MerchantBannedComponent } from './merchant-banned/merchant-banned.component';
+import { MerchantVsattpComponent } from './merchant-vsattp/merchant-vsattp.component';
 
 
 @NgModule({
-    declarations: [CreateDishComponent, DishesComponent, MyMerchantBannerComponent, FooterComponent, MerchantSecondNavbarComponent, MerchantRegisterComponent],
+    declarations: [CreateDishComponent, DishesComponent, MyMerchantBannerComponent, FooterComponent, MerchantSecondNavbarComponent, MerchantRegisterComponent, MerchantInfoComponent, DishEditComponent, DishDeleteComponent, MerchantBannedComponent, MerchantVsattpComponent],
     exports: [
         FooterComponent
     ],
@@ -21,7 +27,9 @@ import { MerchantRegisterComponent } from './merchant-register/merchant-register
         CommonModule,
         MerchantRoutingModule,
         ReactiveFormsModule,
-        SharedModule
+        SharedModule,
+      ModalModule.forRoot(),
+
     ]
 })
 export class MerchantModule { }

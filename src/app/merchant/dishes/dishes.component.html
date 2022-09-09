@@ -47,9 +47,9 @@
                   </a>
                 </td>
                 <td class="text-center" style="border-left: none">
-                  <a class="btn btn-danger" routerLink="['/merchant/dish/delete', dish.id]">
+                  <button class="btn btn-danger" (click)="openModalDeleteDish(templateDeleteDish, dish.id)">
                     <i class="fa fa-trash"></i>
-                  </a>
+                  </button>
                 </td>
               </tr>
               </tbody>
@@ -68,3 +68,15 @@
 
 <hr>
 <app-footer></app-footer>
+<ng-template #templateDeleteDish>
+  <div class="modal-header">
+    <h4 class="modal-title pull-left">Bạn chắc chắn muốn xóa món ăn này chứ?</h4>
+    <button type="button" class="close pull-right" aria-label="Close" (click)="modalRef.hide()">
+      <span aria-hidden="true">×</span>
+    </button>
+  </div>
+  <div class="modal-footer">
+    <button type="button" class="btn btn-danger" (click)="deleteDish()"><i class="fa-solid fa-trash-can"></i>Xóa</button>
+    <button type="button" class="btn btn-default" (click)="modalRef.hide()">Đóng</button>
+  </div>
+</ng-template>

@@ -75,9 +75,9 @@
                 </div>
                 <div id="collapseCategory" class="" aria-labelledby="headingCategory"
                      data-parent="#accordion">
-                  <div class="filters-card-body card-shop-filters">
+                  <div class="filters-card-body card-shop-filters" >
                     <div class="custom-control custom-checkbox" *ngFor="let category of categories">
-                      <input type="checkbox" class="custom-control-input" id="cb-category-{{category.id}}" (click)="toggleCheckbox(category.id)">
+                      <input type="checkbox" class="custom-control-input"   id="cb-category-{{category.id}}" (click)="toggleCheckbox(category.id)">
                       <label class="custom-control-label" for="cb-category-{{category.id}}">{{category.name}} <small
                         class="text-black-50">({{category.numberOfDishes}} món)</small></label>
                     </div>
